@@ -1,9 +1,91 @@
-@import 'tailwindcss';
+@import 'trix/dist/trix.css';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+[x-cloak] {
+    display: none !important;
+}
+
+/* Pistes de carrousel horizontal (accueil) : défilement natif tactile
+   conservé, seule la barre de scroll visuelle est masquée. */
+.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Éditeur de texte riche (admin Articles/Produits) : pas de pièces jointes
+   (aucun point de dépôt configuré côté serveur), habillage aux couleurs de
+   la marque. */
+trix-toolbar [data-trix-button-group="file-tools"] {
+    display: none;
+}
+
+trix-toolbar {
+    border: 1px solid theme('colors.gray.300');
+    border-bottom: none;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: theme('colors.gray.50');
+    padding: 0.5rem;
+}
+
+trix-editor {
+    min-height: 12rem;
+    border: 1px solid theme('colors.gray.300');
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+trix-editor:focus {
+    outline: none;
+    border-color: theme('colors.primary.500');
+    box-shadow: 0 0 0 1px theme('colors.primary.500');
+}
+
+/* Rendu public du contenu riche (articles, description produit). */
+.rich-text :where(p) {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.rich-text :where(h1, h2, h3) {
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: theme('colors.gray.900');
+}
+
+.rich-text :where(ul, ol) {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    padding-left: 1.5em;
+}
+
+.rich-text :where(ul) {
+    list-style: disc;
+}
+
+.rich-text :where(ol) {
+    list-style: decimal;
+}
+
+.rich-text :where(a) {
+    color: theme('colors.primary.600');
+    text-decoration: underline;
+}
+
+.rich-text :where(strong) {
+    font-weight: 700;
+}
+
+.rich-text :where(blockquote) {
+    border-left: 3px solid theme('colors.gray.200');
+    padding-left: 1em;
+    color: theme('colors.gray.500');
+    font-style: italic;
 }
