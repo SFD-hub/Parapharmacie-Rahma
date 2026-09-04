@@ -17,7 +17,7 @@ class AdminSeeder extends Seeder
             ['email' => 'Proprietaire@demo.com'],
             [
                 'name' => 'Administrateur',
-                'password' => Hash::make('Rahmane#2026Vps'),
+                'password' => Hash::make('password'),
             ]
         );
     }
