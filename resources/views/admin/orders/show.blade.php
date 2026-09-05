@@ -1,4 +1,4 @@
-<x-admin-layout :title="'Commande '.$order->order_number">
+<x-admin-layout :title="'Commande '.$order->order_number" :back-url="route('admin.orders.pending')">
     <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div>
             <h1 class="text-lg font-semibold text-gray-900">Commande {{ $order->order_number }}</h1>

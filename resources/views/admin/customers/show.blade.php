@@ -1,4 +1,4 @@
-<x-admin-layout :title="$customer->name">
+<x-admin-layout :title="$customer->name" :back-url="route('admin.customers.index')">
     <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div>
             <a href="{{ route('admin.customers.index') }}" class="mb-1 inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">

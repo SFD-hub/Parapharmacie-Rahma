@@ -1,4 +1,4 @@
-<x-admin-layout :title="'Modifier '.$article->title">
+<x-admin-layout :title="'Modifier '.$article->title" :back-url="route('admin.articles.index')">
     <form method="POST" action="{{ route('admin.articles.update', $article) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')

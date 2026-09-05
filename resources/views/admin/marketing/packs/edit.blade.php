@@ -1,4 +1,4 @@
-<x-admin-layout :title="'Modifier '.$pack->name">
+<x-admin-layout :title="'Modifier '.$pack->name" :back-url="route('admin.marketing.packs.index')">
     <form method="POST" action="{{ route('admin.marketing.packs.update', $pack) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')

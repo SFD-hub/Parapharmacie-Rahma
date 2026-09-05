@@ -1,4 +1,4 @@
-<x-admin-layout :title="'Modifier '.$product->name">
+<x-admin-layout :title="'Modifier '.$product->name" :back-url="route('admin.products.index')">
     <div class="space-y-6">
         <form method="POST" action="{{ route('admin.products.update', $product) }}">
             @csrf

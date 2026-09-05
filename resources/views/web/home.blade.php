@@ -15,7 +15,7 @@
 
     @php
         $universes = [
-            ['title' => 'Soin visage', 'search' => 'visage', 'icon' => 'heart', 'image' => 'images/univers/soinvisage.png'],
+            ['title' => 'Soin visage', 'search' => 'visage', 'icon' => 'heart', 'image' => 'images/univers/soin_visage.jpg'],
             ['title' => 'Corps et bain', 'search' => 'corps', 'icon' => 'shield', 'image' => 'images/univers/corpetbain.jpg'],
             ['title' => 'Sport', 'search' => 'sport', 'icon' => 'sparkles', 'image' => 'images/univers/sport.jpg'],
             ['title' => 'Cheveux', 'search' => 'cheveux', 'icon' => 'sparkles', 'image' => 'images/univers/cheveux.jpg'],
@@ -40,7 +40,7 @@
                         >
                             @if (file_exists(public_path($universe['image'])))
                                 <img
-                                    src="{{ asset($universe['image']) }}"
+                                    src="{{ asset($universe['image']) }}?v={{ filemtime(public_path($universe['image'])) }}"
                                     alt="{{ $universe['title'] }}"
                                     class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105"
                                     loading="lazy"

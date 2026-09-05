@@ -7,7 +7,7 @@ use Illuminate\View\View;
 
 class AdminLayout extends Component
 {
-    public function __construct(public ?string $title = null, public ?string $subtitle = null, public bool $search = true) {}
+    public function __construct(public ?string $title = null, public ?string $subtitle = null, public bool $search = true, public ?string $backUrl = null) {}
 
     /**
      * Get the view / contents that represents the component.

@@ -50,6 +50,16 @@
                         <x-icon name="menu" class="h-6 w-6" />
                     </button>
 
+                    @if ($backUrl)
+                        <a
+                            href="{{ $backUrl }}"
+                            class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                            aria-label="Retour"
+                        >
+                            <x-icon name="chevron-left" class="h-5 w-5" />
+                        </a>
+                    @endif
+
                     <div class="min-w-0">
                         <h1 class="text-xl font-bold text-gray-900 sm:text-2xl">{{ $title }}</h1>
                         @if ($subtitle)
