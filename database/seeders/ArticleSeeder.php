@@ -47,6 +47,19 @@ class ArticleSeeder extends Seeder
                     'serum-b3-ampoule-concentree-30ml',
                 ],
             ],
+            [
+                'title' => 'Comment calmer une peau sensible et irritée',
+                'excerpt' => 'Rougeurs et tiraillements : les gestes simples pour apaiser durablement une peau sensible.',
+                'category' => 'Soin du visage',
+                'content' => '<p>Une peau sensible réagit vite et fort : rougeurs, tiraillements, picotements ou sensations de chaleur peuvent apparaître après le nettoyage, un changement de température, ou simplement au contact d\'un nouveau produit.</p>'
+                    .'<p>Cette réactivité s\'explique le plus souvent par une barrière cutanée fragilisée — par le froid, une eau de nettoyage trop chaude, des produits parfumés, ou un nettoyage trop fréquent qui use les défenses naturelles de la peau au fil du temps.</p>'
+                    .'<p>Une barrière affaiblie laisse passer plus facilement les irritants extérieurs, ce qui entretient un véritable cercle d\'inconfort : plus la peau réagit, plus elle s\'affaiblit, et plus elle devient sensible aux agressions suivantes.</p>'
+                    .'<p><strong>Le geste à adopter :</strong> simplifiez votre routine au maximum avec un nettoyage doux, sans savon ni parfum, et une eau tiède. Une brume d\'eau thermale peut être appliquée à tout moment de la journée pour apaiser immédiatement, et une crème réparatrice aide à restaurer le confort en quelques jours sur les zones les plus fragilisées.</p>',
+                'products' => [
+                    'eau-thermale-apaisante-300ml',
+                    'cicaplast-baume-b5-40ml',
+                ],
+            ],
         ];
 
         foreach ($articles as $data) {
